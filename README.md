@@ -1,19 +1,18 @@
-LAV Filters - ffmpeg based DirectShow Splitter and Decoders
+# LAV Filters - ffmpeg based DirectShow Splitter and Decoders
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/Nevcairiel/LAVFilters?branch=master&svg=true)](https://ci.appveyor.com/project/Nevcairiel/LAVFilters)
 
 LAV Filters are a set of DirectShow filters based on the libavformat and libavcodec libraries
 from the ffmpeg project, which will allow you to play virtually any format in a DirectShow player.
 
 The filters are still under development, so not every feature is finished, or every format supported.
 
-Install
-=============================
+## Install
 - Unpack
 - Register (install_*.bat files)
 	Registering requires administrative rights.
 	On Vista/7 also make sure to start it in an elevated shell.
 
-Using it
-=============================
+## Using it
 By default the splitter will register for all media formats that have been
 tested and found working at least partially.
 This currently includes (but is not limited to)
@@ -28,8 +27,7 @@ The Audio and Video Decoder will register with a relatively high merit, which sh
 it the preferred decoder by default. Most players offer a way to choose the preferred
 decoder however.
 
-Automatic Stream Selection
-=============================
+## Automatic Stream Selection
 LAV Splitter offers different ways to pre-select streams when opening a file.
 The selection of video streams is not configurable, and LAV Splitter will quite simply
 pick the one with the best quality.
@@ -88,8 +86,7 @@ This rule means the following:
 If audio is english, load an english or a german forced subtitle track, otherwise turn subtitles off.
 If audio is not english, load english or german subtitles.
 
-BluRay Support
-=============================
+## BluRay Support
 To play a BluRay, simply open the index.bdmv file in the BDMV folder on the BluRay disc.
 LAV Splitter will then automatically detect the longest track on the disc (usually the main movie),
 and start playing.
@@ -98,8 +95,7 @@ will then play that specific title.
 
 In future versions you'll be able to choose the title from within the player, as well.
 
-Compiling
-=============================
+## Compiling
 Compiling is pretty straight forward using VS2017 (included project files).
 Older versions of Visual Studio are not officially supported, but may stil work.
 
@@ -119,8 +115,7 @@ inside the "libbluray" directory in the main directory.
 You can get the modified version here:
 http://git.1f0.de/gitweb?p=libbluray.git;a=summary
 
-Feedback
-=============================
+## Feedback
 GitHub Project: https://github.com/Nevcairiel/LAVFilters
 Doom9: http://forum.doom9.org/showthread.php?t=156191
 You can, additionally, reach me on IRC in the MPC-HC channel on freenode (#mpc-hc)
